@@ -20,11 +20,11 @@
  }
  
  Pets.prototype.list = function(count, callback){
-     var returnArray = [];
-     for(var i in db){
-         returnArray[i] = db[i];
-     }
-     callback(null,returnArray);
+     var arr = Object.keys(db).reduce(function(arr, id){
+        arr.push(db[id]);
+        return arr;
+    }, []);
+    callback(null, arr.reverse());
  }
  
  function prepopulateDatabase(){

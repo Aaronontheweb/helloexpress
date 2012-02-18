@@ -1,0 +1,8 @@
+h1= title
+- if(typeof(pets) !== "undefined")
+    p YOU HAVE PETS
+    ul
+    - each pet in pets
+        li #{pet.petName} - #{pet.petType}
+- else
+    p You have no pets 

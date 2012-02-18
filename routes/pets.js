@@ -12,6 +12,7 @@ module.exports = function(app){
     app.get('/pets/list', function(req, res){
         Pets.list(30, function(error, data){
             if(error) return res.render('dead_pets', {title:"Your pets are dead" + Pets.PetStoreName, error:error});
+            console.log(data);
             res.render('pets/list', {title: 'Your Pets ' + Pets.PetStoreName, pets:data});
         });
     });
