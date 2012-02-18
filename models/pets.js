@@ -2,7 +2,7 @@
  * Pets Model
  */
  
- var db = [];
+ var db = {};
  
  var Pets = module.exports = exports = function Pets(petStoreName, allowsBadgers){
      this.PetStoreName = petStoreName;
@@ -28,25 +28,26 @@
  }
  
  function prepopulateDatabase(){
-     db = [
-            'TheProfessor':{
+     db['TheProfessor'] = {
                 petType:'cat',
                 petName:'TheProfessor',
                 petAge:'undying',
                 petPrice:100 
-            },
-            'CaptainBananas':{
+            };
+            
+     db['CaptainBananas'] = {
                 petType:'screeching monkey',
                 petName:'CaptainBananas',
                 petAge:'13 months',
                 petPrice:10000
-            },
-            'KateHudson':{
+            }; 
+            
+            
+        db['KateHudson'] = {
                 petType:'honey badger',
                 petName:'KateHudson',
                 petAge:"33 years (8 seasons of Grey's Anatomy)",
                 petPrice:-1,
                 isBadger:true
-            }
-         ];
+            };
  }
