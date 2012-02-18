@@ -21,7 +21,7 @@
  
  Pets.prototype.list = function(count, callback){
      var returnArray = [];
-     for(var i = 0; i < count; i++){
+     for(var i in db){
          returnArray[i] = db[i];
      }
      callback(null,returnArray);
