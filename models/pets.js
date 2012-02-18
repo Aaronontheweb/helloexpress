@@ -2,7 +2,7 @@
  * Pets Model
  */
  
- var db = {};
+ var db = [];
  
  var Pets = module.exports = exports = function Pets(petStoreName, allowsBadgers){
      this.PetStoreName = petStoreName;
@@ -28,7 +28,7 @@
  }
  
  function prepopulateDatabase(){
-     db = {
+     db = [
             'TheProfessor':{
                 petType:'cat',
                 petName:'TheProfessor',
@@ -48,5 +48,5 @@
                 petPrice:-1,
                 isBadger:true
             }
-         };
+         ];
  }
