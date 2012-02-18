@@ -1,0 +1,14 @@
+h1= title
+
+form(action="/pets/new",method="post")
+    div
+        label(for="pet[petName]") Pet Name
+        input(type="text", size="30", name = "pet[petName]")
+    div
+        label(for="pet[petType]") Pet Type
+        input(type="text", size="30", name = "pet[petType]")
+    div
+        label(for="pet[petPrice]") Pet Price
+        input(type="text", size="30", name = "pet[petPrice]")
+    div#submitButton.large
+        input(type="submit", value="SAVE THIS AWESOME PET")
